@@ -1,4 +1,3 @@
-
 from dao.director import DirectorDAO
 from dao.genre import GenreDAO
 from dao.movie import MovieDAO

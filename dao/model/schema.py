@@ -1,24 +1,20 @@
-from setup_db import db
-
 from marshmallow import fields, Schema
 
 class DirectorSchema(Schema):
-    id = fields.Integer(dump_only=True)
-    name = fields.String()
+    id = fields.Int(dump_only=True)
+    name = fields.Str()
 
 
 class GenreSchema(Schema):
-    id = fields.Integer(dump_only=True)
-    name = fields.String()
+    id = fields.Int(dump_only=True)
+    name = fields.Str()
 
 class MovieSchema(Schema):
-    id = fields.Integer(dump_only=True)
-    title = fields.String()
-    description = fields.String()
-    trailer = fields.String()
-    year = fields.Integer()
+    id = fields.Int(dump_only=True)
+    description = fields.Str()
     rating = fields.Float()
-
-    genre = fields.Nested(GenreSchema)
-
+    title = fields.Str()
+    trailer = fields.Str()
+    year = fields.Int()
     director = fields.Nested(DirectorSchema)
+    genre = fields.Nested(GenreSchema)

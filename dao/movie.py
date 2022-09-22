@@ -1,4 +1,3 @@
-# from setup_db import db
 from dao.model.models import Movie
 
 
